@@ -1,8 +1,9 @@
 import React from 'react'
 import SelectGroup from "../components/SelectGroup"
 import CheckboxPage from './CheckboxPage';
-import { IoMdHelpCircle } from "react-icons/io";
+
 import Slider from '../components/Slider';
+import Help from '../components/Help';
 
 
 const Yourself = () => {
@@ -80,18 +81,20 @@ const Yourself = () => {
         },
     ]
   return (
-   <div className='w-full flex flex-col  '>
-    {/* Slider Component */}
-    <div><Slider></Slider></div>
-    {/* Second Component after Slider */}
-    <div className='lg:w-full flex justify-center items-center'> 
-    <div className='w-5/12 flex-col mx-5'>
+    <div className='w-full flex flex-col justify-center items-center relative '>
+        
+        <div className='flex w-full'><Slider></Slider></div>
+       <div className='w-2/6 ml-[35rem] -mt-20 absolute '>
+        <div className=''><Help></Help>
+        </div></div>
+   <div className='w-4/6 sm:w-3/6 flex justify-center items-center  '>
+    <div className="w-full flex justify-center items-center flex-col">
     
     <div className='w-full '>
-    <h1 className='mt-10 lg:text-4xl text-xl font-bold flex justify-start items-start -ml-2'>Tell us more about Yourself</h1>
+    <h1 className='mt-10 lg:text-4xl text-2xl font-bold flex justify-start items-start -ml-2'>Tell us more about Yourself</h1>
     <p className='mt-5 text-xs lg:text-[1rem]'>Your answer will help us build an experience to match your needs </p>
     </div>
-    <div className='w-full  '>
+    <div className='w-full '>
     {/* Select Component */}
     <SelectGroup selectOptionsArray={selectOptionsArray} />
     
@@ -100,23 +103,25 @@ const Yourself = () => {
     {/* Checkbox Component */}
     <CheckboxPage></CheckboxPage>
     </div>
-    <SelectGroup selectOptionsArray={selectOptionsArray1} />
-<div>
-
+    
+<div className=''>
+<SelectGroup selectOptionsArray={selectOptionsArray1} />
 
 </div>
-<div className='flex lg:justify-end justify-center items-center lg:ml-[20rem] ml-2'><button type='submit' className=' rounded-md border-gray-500 border-2 w-32 h-10  text-xl font-bold mt-16 mb-10 '>Next</button></div>
+<div className='flex lg:justify-end justify-center items-center lg:ml-[20rem] ml-2'><button type='submit' className=' rounded-md border-gray-500 border-2 w-32 h-10  text-xl font-bold mt-16 mb-10 '>Next</button>
+
+</div>
+
    </div>
-   
-    <div className='lg:flex lg:left-72 lg:bottom-44 relative '><button type='submit' className=' rounded-md bg-black shadow-2xl text-white border-gray-500 border-2 xl:w-28 xl:h-10 xl:text-xl w-16 h-5 text-sm ml-1'>Help</button>
-    <IoMdHelpCircle className='flex absolute xl:top-3 xl:left-3 top-1.5 left-2 xl:h-5 xl:w-5 h-3 w-3 bg-white rounded-full ' />
+  
      
      </div>
-   
+    
   </div>
+  
 
-</div>
-  )
-}
+
+  )}
+
 
 export default Yourself

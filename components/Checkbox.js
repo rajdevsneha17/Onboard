@@ -15,7 +15,7 @@ const Checkbox = ({ options }) => {
         <div className="flex flex-col justify-start items-start">
             {options.map((option, index) => (
                 
-                <label key={option}>
+                <label key={option} className='xl:text-lg lg:text-lg md:text-lg sm:text-md text-xs'>
                     <input
                         type="checkbox"
                         class="w-4 h-4 checked:accent-green-600"

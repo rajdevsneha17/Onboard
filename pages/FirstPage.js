@@ -33,8 +33,7 @@ const FirstPage = () => {
           if (!isChecked) {
             
             alert("Please agree to our terms and policy.");}
-          // Proceed with form submission or any other action
-          // Example: submitForm();
+        
         
         else{
            
@@ -58,7 +57,7 @@ const FirstPage = () => {
          <h1 className='text-3xl font-serif m-6'>Get started with Teachable</h1>
          <p className='text-gray-500 ml-5 '>Join more than 100,000 creators who've sold over <span className='font-bold text-black'> $ 1 billion</span> in courses and coaching</p>
          <form >
-         <div className='flex flex-col w-5/6 m-8    '>
+         <div className='flex flex-col w-5/6 m-8   '>
             
                 <label className='text-gray-500 '>Full Name</label>
                 <input type='text' 
@@ -91,7 +90,7 @@ const FirstPage = () => {
                 
                 onChange={(e) => setPassword(e.target.value)}
                 style={{ border: showError && (!password || !passwordsMatch) ? '1px solid red' : '' }}
-                // style={{ border: showError && !password ? '1px solid red' : '' }}
+               
                 ></input>
 
                   {showError && !password && (
@@ -104,7 +103,7 @@ const FirstPage = () => {
                 name="confirmPassword"
                 onChange={(e) => setcPassword(e.target.value)}
                 style={{ border: showError && (!confirmPassword || !passwordsMatch) ? '1px solid red' : '' }}
-                // style={{ border: showError && !password ? '1px solid red' : '' }}
+                
                 >
                 
                 </input>
