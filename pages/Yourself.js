@@ -87,7 +87,7 @@ const Yourself = () => {
        <div className='w-2/6 ml-[35rem] -mt-20 absolute '>
         <div className=''><Help></Help>
         </div></div>
-   <div className='w-4/6 sm:w-3/6 flex justify-center items-center  '>
+   <div className='w-5/6 sm:w-3/6 md:w-3/6 lg:w-3/6 xl:w-3/6 flex justify-center items-center  '>
     <div className="w-full flex justify-center items-center flex-col">
     
     <div className='w-full '>

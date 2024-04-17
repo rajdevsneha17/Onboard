@@ -13,9 +13,12 @@ const FirstPage = () => {
     const [showError, setShowError] = useState(false);
     const [passwordsMatch, setPasswordsMatch] = useState(true);
     const [isChecked, setIsChecked] = useState(false);
-    
+    const [password1, setPassword1] = useState('');
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
+      };
+      const handlePasswordChange = (event) => {
+        setPassword1(event.target.value);
       };
     
     const handleSubmit = () => {
@@ -84,7 +87,12 @@ const FirstPage = () => {
                   )}
 
                 <label className='text-gray-500 mt-2'>Password</label>
-                <input type='password' 
+                <input type='password'
+                //  id="password"
+                //  value={password1}
+                //onChange={handlePasswordChange}
+                maxLength={10}
+                required 
                 className='border-2 h-10 p-2 rounded-md border-gray-300 outline-none focus:border-gray-600'
                 name="password"
                 
@@ -99,6 +107,7 @@ const FirstPage = () => {
                 
                 <label className='text-gray-500 mt-2'>Confirm Password</label>
                 <input type='password' 
+                maxLength={10}
                 className='border-2 h-10 p-2 rounded-md border-gray-300 outline-none focus:border-gray-600'
                 name="confirmPassword"
                 onChange={(e) => setcPassword(e.target.value)}
